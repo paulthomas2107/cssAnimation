@@ -5,13 +5,15 @@
   --hover-text-transition: all 0.5s;
   --hover-text-font-size: 40px;
   --box-border: 1px solid black;
-  --box-animatiom: size-down ease-out 0.5s infinite alternate both;
+  --box-animatiom: size-down cubic-bezier(1, 0, 1, 1)  0.5s infinite alternate
+    both;
   --box-position: fixed;
   --keyframe-transform: scale(0.3, 0.3);
 }
 
 .hover-text {
   transition: var(--hover-text-transition);
+  transition-timing-function: cubic-bezier(1, 0, 1, 1);
 }
 
 .hover-text:hover {
