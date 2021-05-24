@@ -1,0 +1,36 @@
+:root {
+  --box-unit: 50px;
+  --background-box: yellow;
+  --main-color: #290000;
+  --hover-text-transition: all 0.5s;
+  --hover-text-font-size: 40px;
+  --box-border: 1px solid black;
+  --box-animatiom: size-down ease-out 0.5s infinite alternate both;
+  --box-position: fixed;
+  --keyframe-transform: scale(0.3, 0.3);
+}
+
+.hover-text {
+  transition: var(--hover-text-transition);
+}
+
+.hover-text:hover {
+  color: var(--main-color);
+  font-size: var(--hover-text-font-size);
+}
+
+.box {
+  position: var(--box-position);
+  width: var(--box-unit);
+  height: var(--box-unit);
+  background: var(--background-box);
+  border: var(--box-border);
+  animation: var(--box-animatiom);
+}
+
+@keyframes size-down {
+  100% {
+    transform: var(--keyframe-transform);
+    background: var(--main-color);
+  }
+}
